@@ -20,7 +20,7 @@
         configured_password: "{{ new_password }}"
         update_password: always
         state: present
-
+      no_log: True
    
 
     - name: Set enable secret aka password (EOS)
@@ -29,4 +29,5 @@
           - "enable password {{ enable_password }}"
         parents: "enable"
         save_when: "changed"
+      no_log: True
   
