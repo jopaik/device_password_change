@@ -4,6 +4,7 @@
   hosts: all
   gather_facts: false
   connection: network_cli
+  become: yes
 
   tasks:
     - name: Remove old username (EOS)
