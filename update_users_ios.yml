@@ -19,7 +19,8 @@
 #        hashed_password:
 #          type: 8
 #          value: "{{ new_password_hash }}"
-
+      no_log: True
+      
     - name: Set enable secret (IOS)
       cisco.ios.ios_config:
         lines:
