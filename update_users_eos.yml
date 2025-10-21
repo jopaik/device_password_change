@@ -17,9 +17,11 @@
         name: "{{ new_username }}"
         privilege: 15
         configured_password: "{{ new_password }}"
+      no_log: True
 
     - name: Set enable secret aka password (EOS)
       arista.eos.eos_config:
         lines:
           - "enable password {{ enable_password }}"
         save_when: "changed"
+      no_log: True
